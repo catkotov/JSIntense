@@ -1,0 +1,121 @@
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: content-box;
+}
+header {
+    background-color: lightgrey;
+    height: 50px;
+}
+nav  {
+    border: 1px dotted black;
+    /*width: 50%;*/
+    /*width: max-content;*/
+    /*width: min-content;*/
+    height: inherit;
+    display: flex;
+    /*justify-content: start;*/
+    align-items: center;
+}
+nav > a {
+    text-decoration: none;
+    color: black;
+    padding: 0 30px;
+    font-size: 20px;
+}
+
+.about_me {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+}
+.about_me img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.my_game {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.my_game > * {
+    text-align: center;
+}
+.my_game input, .my_game button {
+    border: none;
+    background-color: lightgrey;
+    margin: 5px;
+    min-height: 30px;
+    border-radius: 5px;
+}
+.my_game button {
+    width: max-content;
+    padding: 0 10px;
+    background-color: lightgreen;
+    border-radius: 5px;
+}
+
+.about_me-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.about_me-description * {
+    padding: 5px;
+}
+
+
+.choose_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose_block_container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 650px;
+}
+
+.choose_block_container > div {
+    width: 100px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: darkseagreen;
+    align-items: center;
+}
+
+.choosed_element {
+    border: 30px black;
+}
+
+/*img {*/
+/*    width: 500px;*/
+/*    margin: 10px 200px;*/
+/*}*/
+/*span {*/
+/*    font-size: 15px;*/
+/*}*/
+/*.name {*/
+/*    color: red;*/
+/*}*/
+/*#skill {*/
+/*    color: green;*/
+/*}*/
+/*h1 {*/
+/*    padding: 0;*/
+/*    margin: 30px;*/
+/*    text-align: center;*/
+/*}*/
+/*h2 {*/
+/*    text-align: center;*/
+/*}*/
