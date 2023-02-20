@@ -82,7 +82,7 @@ nav > a {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    max-width: 650px;
+    max-width: 700px;
 }
 
 .choose_block_container > div {
@@ -95,7 +95,7 @@ nav > a {
 }
 
 .choosed_element {
-    border: 30px black;
+    border: 2px solid black;
 }
 
 /*img {*/
