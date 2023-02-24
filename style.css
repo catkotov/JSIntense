@@ -98,6 +98,22 @@ nav > a {
     border: 2px solid black;
 }
 
+.posts_block {
+    width: 600px;
+    margin: 20px auto;
+}
+
+.posts_block > h2 {
+    text-align: center;
+}
+
+.posts_block_container > * {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: lightgrey;
+}
+
 /*img {*/
 /*    width: 500px;*/
 /*    margin: 10px 200px;*/

@@ -260,3 +260,87 @@ for (let i = 0; i < choosedEl.length; i++) {
 }
 
 //choosedEl[2].removeEventListener("click", eventFunc)
+
+//setTimeout(() => alert("Time out"), 5000)
+//const alarm = setInterval(() => alert("Time out"), 3000)
+
+// const alarm = setInterval(() => {
+//         let wantToSleep = confirm("Хотители Вы спать?")
+//
+//         if (wantToSleep) {
+//             console.log("tic")
+//         } else {
+//             clearInterval(alarm)
+//         }
+//     },
+//     3000
+// )
+
+// 1, 3,2
+// console.log("1")
+// setTimeout(() => {
+//     console.log("2")
+// }, 0)
+// console.log("3")
+
+const postsBlock = document.querySelector(".posts_block_container")
+// const postTitle = document.querySelector(".posts_block_container h3")
+// const postBody = document.querySelector(".posts_block_container span")
+
+const showPostsBtn = document.querySelector(".posts_block button")
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//     .then(response => response.json())
+//     .then(data => {
+//         for (el of data) {
+//             addPost(el.title, el.body)
+//         }
+// //        addPost(data[7].title, data[7].body)
+//     })
+//     .catch(err => console.log(err))
+
+function addPost(title, body) {
+    const postTitle = document.createElement("h3")
+    const postBody = document.createElement("span")
+    const postItem = document.createElement("p")
+
+    postTitle.innerText = title
+    postBody.innerText = body
+
+    postItem.append(postTitle, postBody)
+    postsBlock.append(postItem)
+}
+
+function getPosts() {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+        .then(response => response.json())
+        .then(data => {
+            for (el of data) {
+                addPost(el.title, el.body)
+            }
+        })
+        .catch(err => console.log(err))
+
+}
+
+showPostsBtn.onclick = () => getPosts()
+// function createPost(title, body, userId) {
+//     fetch("https://jsonplaceholder.typicode.com/posts", {
+//         method: 'POST',
+//         body: JSON.stringify({
+//             title: title,
+//             body: body,
+//             userId: userId,
+//         }),
+//         headers: {
+//             'Content-type': 'application/json; charset=UTF-8',
+//         },
+//     })
+//       .then(res => {
+//           console.log(res)
+//           return res.json()
+//       })
+//       .catch(err => console.log(err.message))
+// }
+//
+// createPost("title", "body", 15)
